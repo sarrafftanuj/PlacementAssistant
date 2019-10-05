@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "834930227880",
+    "firebase_url": "https://placement-assistant-e1898.firebaseio.com",
+    "project_id": "placement-assistant-e1898",
+    "storage_bucket": "placement-assistant-e1898.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834930227880:android:515658d0ca7313ae35209d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834930227880-tlvuh7r78ndidl2i254ee83tgagd8p7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0QMcfzHRNC9tfaIFQgVQhHma001kqvK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834930227880-tlvuh7r78ndidl2i254ee83tgagd8p7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

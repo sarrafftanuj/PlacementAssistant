@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 t1.setText("complete");
-                                Intent i = new Intent(getApplicationContext(), Login.class);
+                                Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
                                 startActivity(i);
                                 finish();
 

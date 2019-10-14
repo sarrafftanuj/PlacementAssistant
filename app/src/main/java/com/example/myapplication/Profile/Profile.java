@@ -2,9 +2,9 @@ package com.example.myapplication.Profile;
 
 public class Profile {
     String name;
-    Float hsc;
+    String hsc;
 
-    public Profile(String name, Float ssc, Float hsc, Float aggregate, String phoneno) {
+    public Profile(String name, String ssc, String hsc, String aggregate, String phoneno) {
         this.name = name;
         this.hsc = hsc;
         this.ssc = ssc;
@@ -12,8 +12,11 @@ public class Profile {
         this.phoneno = phoneno;
     }
 
-    Float ssc;
-    Float aggregate;
+    String ssc;
+    String aggregate;
+
+    public Profile() {
+    }
 
     public String getName() {
         return name;
@@ -23,27 +26,27 @@ public class Profile {
         this.name = name;
     }
 
-    public Float getHsc() {
+    public String getHsc() {
         return hsc;
     }
 
-    public void setHsc(Float hsc) {
+    public void setHsc(String hsc) {
         this.hsc = hsc;
     }
 
-    public Float getSsc() {
+    public String getSsc() {
         return ssc;
     }
 
-    public void setSsc(Float ssc) {
+    public void setSsc(String ssc) {
         this.ssc = ssc;
     }
 
-    public Float getAggregate() {
+    public String getAggregate() {
         return aggregate;
     }
 
-    public void setAggregate(Float aggregate) {
+    public void setAggregate(String aggregate) {
         this.aggregate = aggregate;
     }
 

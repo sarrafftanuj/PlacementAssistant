@@ -53,9 +53,9 @@ public class ProfileActivity extends AppCompatActivity {
         String name = username.getText().toString();
         String phoneno=userphonenumber.getText().toString();
 
-        float ssc=Float.valueOf(SscMarks.getText().toString());
-        float hsc = Float.valueOf(HscMarks.getText().toString());
-        float engiag = Float.valueOf(EngiAggr.getText().toString());
+        String ssc=String.valueOf(SscMarks.getText().toString());
+        String hsc = String.valueOf(HscMarks.getText().toString());
+        String engiag = String.valueOf(EngiAggr.getText().toString());
         Profile profile =new Profile(name,ssc,hsc,engiag,phoneno);
         databaseReference.child(phoneno).setValue(profile);
 

@@ -8,36 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:834930227880:android:b6343bacf46eb2e735209d",
-        "android_client_info": {
-          "package_name": "com.android.application"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "834930227880-tlvuh7r78ndidl2i254ee83tgagd8p7i.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB0QMcfzHRNC9tfaIFQgVQhHma001kqvK8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "834930227880-tlvuh7r78ndidl2i254ee83tgagd8p7i.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:834930227880:android:ef7a16df78faf93b35209d",
+        "mobilesdk_app_id": "1:834930227880:android:515658d0ca7313ae35209d",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
@@ -48,43 +19,6 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.myapplication",
-            "certificate_hash": "02979090fd512bd189a8ff369bfa6f2f93531111"
-          }
-        },
-        {
-          "client_id": "834930227880-tlvuh7r78ndidl2i254ee83tgagd8p7i.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB0QMcfzHRNC9tfaIFQgVQhHma001kqvK8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "834930227880-tlvuh7r78ndidl2i254ee83tgagd8p7i.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:834930227880:android:cafdf05ab3f5950835209d",
-        "android_client_info": {
-          "package_name": "com.example.placementassistant"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "834930227880-02a5mpripllupo9rmfp86d5ke71vsihk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.placementassistant",
             "certificate_hash": "02979090fd512bd189a8ff369bfa6f2f93531111"
           }
         },

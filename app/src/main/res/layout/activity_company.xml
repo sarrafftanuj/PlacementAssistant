@@ -6,8 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".Company"
     android:orientation="vertical">
-<EditText
+ <EditText
+    android:id="@+id/companyname"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="companyname"
 
-   />
+    />
+   <EditText
+       android:id="@+id/companyaddress"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="companyaddress"
+       android:inputType="textPassword"
+
+       />
+   <EditText
+       android:id="@+id/companyctc"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="companyctc"
+
+       />
+   <EditText
+       android:id="@+id/companyphone"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="companyphone"
+       android:inputType="textPassword"
+
+       />
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/Add_Company"
+       android:text="company"
+       />
 
    </LinearLayout>

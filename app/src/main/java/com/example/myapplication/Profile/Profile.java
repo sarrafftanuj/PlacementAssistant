@@ -15,6 +15,9 @@ public class Profile {
     Float ssc;
     Float aggregate;
 
+    public Profile() {
+    }
+
     public String getName() {
         return name;
     }

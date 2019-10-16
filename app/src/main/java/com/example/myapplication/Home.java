@@ -28,6 +28,13 @@ public class Home extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),ShowProfile.class);
+                startActivity(i);
+            }
+        });
 
     }
 

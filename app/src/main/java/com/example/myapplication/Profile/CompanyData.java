@@ -21,13 +21,8 @@ public class CompanyData {
     String criteria;
     float ctc;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
     public String getAdd() {
         return add;
@@ -59,5 +54,13 @@ public class CompanyData {
 
     public void setCtc(float ctc) {
         this.ctc = ctc;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

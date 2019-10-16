@@ -5,10 +5,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.Profile.CompanyData;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -27,6 +32,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class ListCompany extends AppCompatActivity {
     FirebaseDatabase database;
@@ -48,6 +55,7 @@ public class ListCompany extends AppCompatActivity {
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.list_view_layout, R.id.companyname_id, name);
         l1 = (ListView) findViewById(R.id.company_id);
         //l1.setAdapter(arrayAdapter);
+
 
         myref.child("60").addChildEventListener(new ChildEventListener() {
             @Override
@@ -78,5 +86,21 @@ public class ListCompany extends AppCompatActivity {
 
             }
         });
+        l1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                String stringText;
+                stringText= (String)parent.getItemAtPosition(position);
+                Toast.makeText(ListCompany.this,stringText,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ListCompany.this, CompanyProfile.class);
+                // String message = entry.getMessage();
+                intent.putExtra(EXTRA_MESSAGE, stringText.toString());
+                startActivity(intent);
+            }
+        });
+
+
     }
+
 }

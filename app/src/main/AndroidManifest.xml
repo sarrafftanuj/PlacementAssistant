@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListCompany" />
+        <activity android:name=".CompanyProfile"></activity>
+        <activity android:name=".Login" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ShowProfile" />
-        <activity android:name=".Login">
+        <activity android:name=".ListCompany">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

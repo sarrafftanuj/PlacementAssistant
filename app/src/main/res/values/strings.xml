@@ -2,4 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="emptyText">Please Enter email or Password</string>
     <string name="lengthError">length of password  > 6 character  </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

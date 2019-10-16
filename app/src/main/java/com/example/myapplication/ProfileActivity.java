@@ -52,12 +52,14 @@ public class ProfileActivity extends AppCompatActivity {
     {
         String name = username.getText().toString();
         String phoneno=userphonenumber.getText().toString();
-
+        myfirebaseauth=FirebaseAuth.getInstance();
+        FirebaseUser user = myfirebaseauth.getCurrentUser();
+        String uid = user.getUid();
         float ssc=Float.valueOf(SscMarks.getText().toString());
         float hsc = Float.valueOf(HscMarks.getText().toString());
         float engiag = Float.valueOf(EngiAggr.getText().toString());
         Profile profile =new Profile(name,ssc,hsc,engiag,phoneno);
-        databaseReference.child(phoneno).setValue(profile);
+        databaseReference.child(uid).setValue(profile);
 
     }
 

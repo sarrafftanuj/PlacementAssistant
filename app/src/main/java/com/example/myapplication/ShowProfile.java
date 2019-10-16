@@ -24,11 +24,11 @@ public class ShowProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_profile);
-        nameTextView = (TextView) findViewById(R.id.user_name_profile_id);
-        hscTextView = (TextView) findViewById(R.id.hsc_marks_profile_id);
-        sscTextView = (TextView) findViewById(R.id.ssc_marks_profile_id);
-        aggregateTextView = (TextView) findViewById(R.id.engi_aggre_profile_id);
-        phoneTextView = (TextView) findViewById(R.id.phonenumber_profile_id);
+        nameTextView = (TextView) findViewById(R.id.name_showprofile_id);
+        hscTextView = (TextView) findViewById(R.id.hscmarks_showprofile_id);
+        sscTextView = (TextView) findViewById(R.id.sssmarks_showprofile_id);
+        aggregateTextView = (TextView) findViewById(R.id.Engi_aggr_showprofile_id);
+        phoneTextView = (TextView) findViewById(R.id.phonenumber_showprofile_id);
         database = FirebaseDatabase.getInstance();
         myref = database.getReference("Users").child("67890567890");
         myref.addValueEventListener(new ValueEventListener() {

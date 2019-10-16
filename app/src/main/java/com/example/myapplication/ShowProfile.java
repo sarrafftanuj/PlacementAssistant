@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.myapplication.Profile.Profile;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ShowProfile extends AppCompatActivity {
     FirebaseDatabase database;
+    FirebaseAuth mauth;
     DatabaseReference myref;
     TextView nameTextView, hscTextView, sscTextView, aggregateTextView, phoneTextView;
     FirebaseAuth auth;
@@ -30,7 +32,10 @@ public class ShowProfile extends AppCompatActivity {
         aggregateTextView = (TextView) findViewById(R.id.Engi_aggr_showprofile_id);
         phoneTextView = (TextView) findViewById(R.id.phonenumber_showprofile_id);
         database = FirebaseDatabase.getInstance();
-        myref = database.getReference("Users").child("67890567890");
+        mauth = FirebaseAuth.getInstance();
+        FirebaseUser user = mauth.getCurrentUser();
+        String uid = user.getUid();
+        myref = database.getReference("Users").child(uid);
         myref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

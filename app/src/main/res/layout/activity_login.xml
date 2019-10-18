@@ -13,7 +13,7 @@
         android:id="@+id/email_login_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="email"
+        android:hint="Email"
 
         />
 
@@ -21,7 +21,7 @@
         android:id="@+id/password_login_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
 
         />
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signup_login_id"
-        android:text="signup"
+        android:text="need account?"
         />
 
 </LinearLayout>

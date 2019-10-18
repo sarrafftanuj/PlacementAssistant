@@ -1,0 +1,121 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision ccb087338020219be74303b8ffba0df9851b1eee)
++++ app/src/main/AndroidManifest.xml	(revision 357ddc3835154f51b07eb80bd472691ab016d6c7)
+@@ -9,12 +9,13 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+-        <activity android:name=".ListCompany" />
++        <activity android:name=".CompanyProfile"></activity>
++        <activity android:name=".Login" />
+         <activity android:name=".ProfileActivity" />
+         <activity android:name=".Home" />
+         <activity android:name=".MainActivity" />
+         <activity android:name=".ShowProfile" />
+-        <activity android:name=".Login">
++        <activity android:name=".ListCompany">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
+Index: app/src/main/java/com/example/myapplication/ListCompany.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/myapplication/ListCompany.java	(revision ccb087338020219be74303b8ffba0df9851b1eee)
++++ app/src/main/java/com/example/myapplication/ListCompany.java	(revision 357ddc3835154f51b07eb80bd472691ab016d6c7)
+@@ -5,10 +5,15 @@
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.recyclerview.widget.RecyclerView;
+ 
++import android.content.Intent;
+ import android.os.Bundle;
++import android.view.View;
+ import android.view.ViewGroup;
++import android.widget.AdapterView;
+ import android.widget.ArrayAdapter;
+ import android.widget.ListView;
++import android.widget.TextView;
++import android.widget.Toast;
+ 
+ import com.example.myapplication.Profile.CompanyData;
+ import com.firebase.ui.database.FirebaseRecyclerAdapter;
+@@ -28,6 +33,8 @@
+ import java.util.List;
+ import java.util.Map;
+ 
++import static android.provider.AlarmClock.EXTRA_MESSAGE;
++
+ public class ListCompany extends AppCompatActivity {
+     FirebaseDatabase database;
+     FirebaseUser user;
+@@ -49,6 +56,7 @@
+         l1 = (ListView) findViewById(R.id.company_id);
+         //l1.setAdapter(arrayAdapter);
+ 
++
+         myref.child("60").addChildEventListener(new ChildEventListener() {
+             @Override
+             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+@@ -78,5 +86,21 @@
+ 
+             }
+         });
++        l1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
++            @Override
++            public void onItemClick(AdapterView<?> parent, View view, int position,
++                                    long id) {
++                String stringText;
++                stringText= (String)parent.getItemAtPosition(position);
++                Toast.makeText(ListCompany.this,stringText,Toast.LENGTH_LONG).show();
++                Intent intent = new Intent(ListCompany.this, CompanyProfile.class);
++                // String message = entry.getMessage();
++                intent.putExtra(EXTRA_MESSAGE, stringText.toString());
++                startActivity(intent);
++            }
++        });
++
++
+     }
++
+ }
+Index: app/src/main/java/com/example/myapplication/Profile/CompanyData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/myapplication/Profile/CompanyData.java	(revision ccb087338020219be74303b8ffba0df9851b1eee)
++++ app/src/main/java/com/example/myapplication/Profile/CompanyData.java	(revision 357ddc3835154f51b07eb80bd472691ab016d6c7)
+@@ -21,13 +21,8 @@
+     String criteria;
+     float ctc;
+ 
+-    public String getName() {
+-        return name;
+-    }
+ 
+-    public void setName(String name) {
+-        this.name = name;
+-    }
++
+ 
+     public String getAdd() {
+         return add;
+@@ -60,4 +55,12 @@
+     public void setCtc(float ctc) {
+         this.ctc = ctc;
+     }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
+ }
+\ No newline at end of file

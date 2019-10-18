@@ -26,7 +26,7 @@ public class CompanyProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_profile);
         Intent intent = getIntent();
-        final String str = intent.getStringExtra(EXTRA_MESSAGE);
+        final String str = intent.getStringExtra (EXTRA_MESSAGE);
         t1 =(TextView)findViewById(R.id.company_profile_name_id);
         t2=(TextView)findViewById(R.id.company_add_profile_id);
         t3=(TextView)findViewById(R.id.company_profile_contact_id);
